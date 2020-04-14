@@ -1,0 +1,144 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* Custom */
+:root {
+  --nav-header-padding: .5em;
+  --navbar-letter-spacing: .1em;
+  --navbar-text-shadow: 0 0 1px #fff, 0px 0px 1px #fff;
+  --nav-item-vertical-padding: calc(1.25em + var(--nav-header-padding));
+  --color-black: #000;
+}
+
+body, html {
+  height: 100%;
+  font-family: "Lato", sans-serif;
+}
+
+p {
+  line-height: 1.8;
+}
+
+#content {
+  height: 100%;
+}
+
+.hero {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.hero.large {
+  background-image: url('../images/main.jpg');
+  min-height: 100%;
+  opacity: .85;
+  z-index: -1;
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 2.1em;
+  text-transform: uppercase;
+}
+.hero-text span {
+  background-color: var(--color-black);
+  color: #fff;
+  padding: .5em .25em;
+  letter-spacing: var(--navbar-letter-spacing);
+}
+
+.navbar {
+  background-color: #111;
+  color: #fff;
+  opacity: .95;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  padding-left: calc(var(--nav-header-padding) * 2);
+}
+
+.nav-header {
+  text-transform: uppercase;
+  font-size: 1.8em;
+  letter-spacing: var(--navbar-letter-spacing);
+  padding-top: var(--nav-header-padding);
+  padding-bottom: var(--nav-header-padding);
+  text-shadow: var(--navbar-text-shadow);
+}
+
+.nav-list {
+  display: flex;
+  text-transform: uppercase;
+}
+
+.nav-item {
+  display: inline-block;
+  padding: var(--nav-item-vertical-padding) 0;
+  min-width: 11em;
+  text-align: center;
+  letter-spacing: var(--navbar-letter-spacing);
+  font-size: .8em;
+  text-decoration: none;
+  color: #fff;
+}
+.nav-item:hover {
+  cursor: pointer;
+  background-color: var(--color-black);
+  text-shadow: var(--navbar-text-shadow);
+}
+.nav-item.active {
+  background-color: var(--color-black);
+  text-shadow: var(--navbar-text-shadow);
+}

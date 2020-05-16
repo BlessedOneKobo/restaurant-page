@@ -251,7 +251,7 @@ section p:first-of-type:first-line {
 
   /* Content */
   section {
-    padding-left: 16em;
-    padding-right: 16em;
+    padding-left: 12em;
+    padding-right: 12em;
   }
 }

@@ -136,7 +136,7 @@ a:hover {
 }
 .hero.large {
   background-image: url('../images/main.jpg');
-  min-height: 75%;
+  min-height: 70%;
   opacity: .85;
   z-index: -1;
 }
@@ -159,6 +159,7 @@ a:hover {
 section {
   padding: 1.4em 1em;
   background-color: var(--navbar-bg-color);
+  min-height: 500px;
 }
 section * {
   color: var(--section-color);

@@ -54,11 +54,13 @@ table {
 :root {
   --nav-header-padding: .5em;
   --navbar-bg-color: #fff;
-  --navbar-fg-color: #111;
+  --navbar-fg-color: #272727;
+  --hero-text-fg-color: var(--navbar-bg-color);
+  --hero-text-bg-color: #111;
   --section-color: #333;
   --navbar-letter-spacing: .1em;
-  --navbar-text-shadow: 0 0 1px var(--navbar-bg-color),
-                        0px 0px 1px var(--navbar-bg-color);
+  --navbar-text-shadow: 0 0 1px var(--navbar-fg-color),
+                        0px 0px 1px var(--navbar-fg-color);
   --nav-item-vertical-padding: calc(1.25em + var(--nav-header-padding));
   --color-black: #000;
 }
@@ -97,11 +99,12 @@ a:hover {
 
 /* Navigation Bar */
 .navbar {
-  background-color: var(--navbar-bg-color);
-  color: var(--navbar-fg-color);
+  background-color: var(--navbar-fg-color);
+  color: var(--navbar-bg-color);
   display: flex;
   flex-flow: column;
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
   text-align: center;
   border-bottom: 1px solid rgb(0,0,0, .3);
@@ -119,10 +122,11 @@ a:hover {
 .nav-item {
   display: block;
   padding: .25em 0;
+  font-weight: bold;
 }
 .nav-item.active {
-  color: var(--navbar-bg-color);
-  background-color: var(--navbar-fg-color);
+  color: var(--navbar-fg-color);
+  background-color: var(--navbar-bg-color);
   text-shadow: var(--navbar-text-shadow);
 }
 
@@ -136,7 +140,7 @@ a:hover {
 }
 .hero.large {
   background-image: url('../images/main.jpg');
-  min-height: 70%;
+  min-height: 62%;
   opacity: .85;
   z-index: -1;
 }
@@ -157,7 +161,7 @@ a:hover {
 
 /* Content */
 section {
-  padding: 1.4em 1em;
+  padding: 2.5em 1em;
   background-color: var(--navbar-bg-color);
   min-height: 500px;
 }
@@ -206,8 +210,7 @@ section p:first-of-type:first-line {
     display: flex;
     flex-flow: row;
     width: 100%;
-    opacity: .9;
-    justify-content: space-between;
+    justify-content: space-around;
     border-bottom: none;
   }
   .nav-list {
@@ -227,11 +230,11 @@ section p:first-of-type:first-line {
     letter-spacing: var(--navbar-letter-spacing);
     font-size: .8em;
     text-decoration: none;
-    color: var(--navbar-fg-color);
+    color: var(--navbar-bg-color);
   }
   .nav-item:hover {
-    color: var(--navbar-bg-color);
-    background-color: var(--navbar-fg-color);
+    color: var(--navbar-fg-color);
+    background-color: var(--navbar-bg-color);
     text-shadow: var(--navbar-text-shadow);
   }
 

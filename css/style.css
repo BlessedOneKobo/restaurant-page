@@ -155,7 +155,7 @@ a:hover {
 }
 .hero.large {
   background-image: url('../images/main.jpg');
-  min-height: 70%;
+  min-height: 300px;
   opacity: .85;
   z-index: -1;
 }
@@ -176,7 +176,7 @@ a:hover {
 
 /* Content */
 section {
-  padding: 2em 1.5em;
+  padding: 2em 2em;
   background-color: var(--navbar-bg-color);
   min-height: 500px;
 }
@@ -218,6 +218,9 @@ section p:first-of-type:first-line {
   .hero {
     background-attachment: fixed;
   }
+  .hero.large {
+    min-height: 500px;
+  }
   .hero-text {
     font-size: 2em;
   }
@@ -239,9 +242,7 @@ section p:first-of-type:first-line {
 
   /* Content */
   section {
-    padding: 4em 1em;
-    padding-left: 6em;
-    padding-right: 6em;
+    padding: 4em 6em;
   }
   section h2 {
     font-size: 1.65em;
